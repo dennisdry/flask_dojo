@@ -16,10 +16,6 @@ class BaseModel(Model):
         database = CreateDatabase.create_db_object()
 
 
-class Entries(BaseModel):
-    story_title = CharField()
-    user_story = CharField()
-    acceptance_criteria = CharField()
-    business_value = IntegerField()
-    estimation = FloatField()
-    status = CharField()
+class flask_dojo(BaseModel):
+    request_counter = IntegerField()
+
