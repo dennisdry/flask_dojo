@@ -16,6 +16,6 @@ class BaseModel(Model):
         database = CreateDatabase.create_db_object()
 
 
-class flask_dojo(BaseModel):
+class FlaskDojo(BaseModel):
     request_counter = IntegerField()
 

@@ -5,11 +5,13 @@ from flask import Flask, request, g, redirect, url_for, \
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+DEBUG = True
+
 
 def init_db():
     db = CreateDatabase.create_db_object()
     db.connect()
-    db.create_tables([Entries], safe=True)
+    db.create_tables([FlaskDojo], safe=True)
 
 
 @app.teardown_appcontext
