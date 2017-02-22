@@ -15,6 +15,8 @@ def init_db():
     try:
         db.connect()
         print("Database connection established.")
+        db.create_tables([FlaskDojo], safe=True)
+        print("Table created")
     except:
         print("Can't connect to database.\nPlease check your connection.txt file.")
 
