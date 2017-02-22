@@ -35,6 +35,7 @@ def request_counter():
     counter = 0
     counter += 1
     return redirect('/')
+    return counter
 
 
 if __name__ == "__main__":
